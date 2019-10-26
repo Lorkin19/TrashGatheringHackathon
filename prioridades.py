@@ -9,7 +9,14 @@ def prioridad(contenedor):
 
     prio = porcentajeOcupado
     kgDisponibles = contenedor.getDisponible()
-
-    for i in range(len(datos), 0, -1):
+    mediaKg = datos[len(datos) - 7].split("#")[2]
+    numSemanas = 1
+    for i in range(len(datos) - 14, 0, -7):
         antiguedad = len(datos) - i
-        
+        kgDiasAnteriores = int(datos[i].split("#")[2])
+        mediaKg = (mediaKg + (kgDiasAnteriores / antiguedad)) / numSemanas
+        numSemanas += 1
+    return prio + mediaKg - kgDisponibles
+
+
+
