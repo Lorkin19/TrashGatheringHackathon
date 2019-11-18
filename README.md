@@ -1,2 +1,5 @@
 # TrashGatheringHackathon
-A project developed during the Hackathon competition at Castellón.
+
+In process.
+
+A project started during the Hackathon competition at Castellón.
